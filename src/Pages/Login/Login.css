@@ -1,0 +1,59 @@
+.login {
+      width: 100vw;
+      height: 100vh;
+      background-image: url(https://as1.ftcdn.net/jpg/01/87/31/18/1000_F_187311839_CQPdXBpojZDntnYo42kYDpHGTWXwya11.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      
+}
+
+.loginWrapper {
+      width: 40%;
+      height: 50%;
+      background-color: rgba(0, 110, 255, 0.418);
+      display: flex;
+      border-radius: 3%;
+}
+
+ .loginRight {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+}
+
+.loginLeft{
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: nowrap;
+}
+
+.loginLetters{
+      font-size: 40px;
+      font-weight: 800;
+      color: rgb(144, 22, 22);
+      cursor: pointer;
+      text-shadow: -1px 0 black, 0 1px black,
+      1px 0 black, 0 -1px black;
+      
+}
+
+
+.iconsLogin {
+      font-size: 50px !important;
+}
+
+.loginBox {
+      height: 200px;
+      padding: 20px;
+      background-color: transparent;
+      border: 0.5px tomato solid;
+      border-radius: 5%;
+}

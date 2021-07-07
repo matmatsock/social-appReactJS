@@ -1,0 +1,74 @@
+.topbarContainer {
+      height: 50px;
+      width: 100%;
+      display:flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background-color: transparent;
+      background-image: url('https://walldecor.pl/49288-superlarge_default/tapeta-london-art-19068-sci-fi-riccardo-zulato.jpg');
+      background-size: cover;
+}
+
+
+
+
+.topbarLeft {
+      flex: 3;
+      background-color:rgba(76, 5, 156, 0.664);
+      color: rgb(144, 22, 22);
+      display: flex;
+      padding-left: 10px;
+      border: 0.5px solid  rgb(144, 22, 22);
+      border-radius: 5%;
+      margin-right: 600px; 
+      margin-left: 2px;
+      cursor: pointer;
+      text-shadow: -1px 0 black, 0 1px black,
+      1px 0 black, 0 -1px black;
+      
+}
+
+
+.logoName {
+    font-size: bold;
+    margin-top: 4px;
+    align-items: center;
+}
+
+.topbarCenter {
+      flex: 5;
+}
+
+.loginBtn{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: rgb(5, 156, 143);
+      background-color:rgba(8, 5, 156, 0.726) ;
+      font-weight: 700;
+      border: 0.5px solid black;
+      border-radius: 5%;
+      margin-left: 9px;
+      text-shadow: -1px 0 black, 0 1px black,
+      1px 0 black, 0 -1px black;
+}
+
+.topbarRight {
+      flex: 4;
+}
+
+.signupBtn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      color: rgb(5, 156, 143);
+      background-color:rgba(8, 5, 156, 0.726) ;
+      font-weight: 700;
+      border: 0.5px solid black;
+      border-radius: 5%;
+      margin-left: 2px;
+      text-shadow: -1px 0 black, 0 1px black,
+      1px 0 black, 0 -1px black;
+      
+}
