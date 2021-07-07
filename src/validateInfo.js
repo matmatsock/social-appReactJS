@@ -14,8 +14,9 @@ export default function validate(values) {
             errors.password = '12345# przeciesz to proste';
           } else if (values.password.length < 6) {
             errors.password = 'omg, raz-dwa-trzy-czery-pięć-hasztag, jasne?';
-          }
-        
+          } else if (/^[0-zA-Z$&+,:;=?@#|'<>.^()%!]$/.test(values.password)) {
+            errors.password = "Brakuje znaku specjalnego";
+           }
           if (!values.password2) {
             errors.password2 = 'człowieniu, tu powtarzasz te cyferki z hasztagiem';
           } else if (values.password2 !== values.password) {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import axios from "axios";
 const useSignup =  validate => {
       const [values, setValues] = useState({
             username:'',
@@ -29,6 +29,29 @@ const useSignup =  validate => {
              e.preventDefault();
 
             setErrors(validate(values));
+            let newUser = {
+                  username: values.username,
+                  email: values.email,
+                  password: values.password,
+              }
+              
+              const headers = {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+              }
+              
+              axios.post(
+                      'http://akademia108.pl/api/social-app/user/signup', 
+                      JSON.stringify(newUser),
+                      { 'headers': headers })
+                  .then((req) => {
+              
+                      // your code :)      
+                
+                      console.log(req.data);  
+                  }).catch((error) => {
+                      console.error(error);
+                  })
       };
 
       return {handleChange, values, handleSubmit, errors};

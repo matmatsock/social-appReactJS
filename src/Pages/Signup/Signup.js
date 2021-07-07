@@ -20,7 +20,7 @@ export default function Signup() {
                                     className="form-input" placeholder="Tu wpisz swoje imię"
                                      /* Tu blokuje ▼ */
                                      value={values.username}
-                                     onCgange={handleChange}/>
+                                     onChange={handleChange}/>
                                      {errors.username && <p>{errors.username}</p>}
                         </div>
 
@@ -32,7 +32,7 @@ export default function Signup() {
                               <input type="email" name="email" 
                                     className="form-input" placeholder="A tu adres mail" 
                                     value={values.email}
-                                    onCgange={handleChange}/>
+                                    onChange={handleChange}/>
                                     {errors.email && <p>{errors.email}</p>}
                         </div>
 
@@ -44,7 +44,7 @@ export default function Signup() {
                               <input type="password" name="password" 
                                     className="form-input" placeholder="Tu wpisz 12345#"
                                     value={values.password}
-                                     onCgange={handleChange}/>
+                                     onChange={handleChange}/>
                                      {errors.password && <p>{errors.password}</p>}
                         </div>
 
@@ -56,7 +56,7 @@ export default function Signup() {
                               <input type="password" name="password2" 
                                     className="form-input" placeholder="O tu, jeszcze raz te cyferki..."
                                     value={values.password2}
-                                     onCgange={handleChange}/>
+                                     onChange={handleChange}/>
                                      {errors.password2 && <p>{errors.password2}</p>}
                         </div>
                         <button className="form-input-btn"type="submit">Bum! Poszło...</button>
