@@ -1,8 +1,9 @@
+
 import Home from "./Pages/Home/Home";
 import Topbar from "./Components/Topbar/Topbar";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
-import AccessibilityIcon from '@material-ui/icons/Accessibility';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,11 +12,15 @@ import {
 } from "react-router-dom";
 
 
+
 export default function App() {
+
+
   return (
+    
     <Router>
       <div>
-       <Topbar />
+        <Topbar />
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
@@ -31,7 +36,9 @@ export default function App() {
         </Switch>
       </div>
     </Router>
-  );
-}
 
+    
+  );
+
+}
 

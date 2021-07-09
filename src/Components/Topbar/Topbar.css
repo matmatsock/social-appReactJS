@@ -8,6 +8,7 @@
       background-color: transparent;
       background-image: url('https://walldecor.pl/49288-superlarge_default/tapeta-london-art-19068-sci-fi-riccardo-zulato.jpg');
       background-size: cover;
+      position: fixed;
 }
 
 
@@ -15,18 +16,15 @@
 
 .topbarLeft {
       flex: 3;
-      background-color:rgba(76, 5, 156, 0.664);
-      color: rgb(144, 22, 22);
+      background-color:transparent;
+      color: #fff;
       display: flex;
       padding-left: 10px;
-      border: 0.5px solid  rgb(144, 22, 22);
-      border-radius: 5%;
       margin-right: 600px; 
       margin-left: 2px;
       cursor: pointer;
       text-shadow: -1px 0 black, 0 1px black,
-      1px 0 black, 0 -1px black;
-      
+      1px 0 black, 0 -1px black; 
 }
 
 
@@ -69,6 +67,5 @@
       border-radius: 5%;
       margin-left: 2px;
       text-shadow: -1px 0 black, 0 1px black,
-      1px 0 black, 0 -1px black;
-      
+      1px 0 black, 0 -1px black;  
 }

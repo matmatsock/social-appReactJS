@@ -1,30 +1,48 @@
-import Topbar from "../../Components/Topbar/Topbar";
-import "./Login.css";
-import {Museum} from "@material-ui/icons";
+import React, { useState } from 'react';
+import LoginForm from './LoginForm';
+
 
 
 export default function Login() {
-      return(
-            <div className="login">
-                  <div className="loginWrapper">
-                        <div className="loginLeft">
-                              <div className="loginLogo"><Museum className="iconsLogin"/>
-                              </div>
-                              <div className="logoLetters">
-                              <h3>atebook</h3>
-                              </div>
-                        </div>
 
-                        <div className="loginRight">
-                              <div className="loginBox">
-                                     <input placeholder="Email" className="loginInput"></input>
-                                     <input placeholder="Password" className="loginInput"></input>
-                                     <button className="loginloginBtn">Hack in!</button>
-                                     
-                              </div>
-                        </div>
-                  </div>
-            </div>
-      )
 
+      const adminUser = {
+            email: "test@test.com",
+            password: "test123"
+      }
+
+      const [user, setUser] = useState({ email: "", password: "" });
+      const [error, setError] = useState("");
+
+      const Login = details => {
+            console.log(details);
+
+            if (details.email == adminUser.email && details.password == adminUser.password) {
+                  console.log("Zhakowano");
+                  setUser({
+                        email: details.email,
+                        password: details.email
+                  });
+            } else {
+                  console.log("Dane nie pasują!");
+                  setError("Dane nie pasują!");
+            }
+      }
+            
+
+
+Logout = () => {
+setUser({ email:"", email: ""});
+ }
+      
+  return (
+      <div>
+              {(user.email !="") ? (
+                  <div className="welcome">
+                        <h2>Czołem, <span>{user.email}</span></h2>
+                        <button onClick={Logout}>Nie-nie, ja spadam</button>
+                  </div> ) : ( <LoginForm Login={Login} error={error} /> 
+                  )}
+      </div>
+  );
 }
