@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 export default function Topbar() {
       return (
             <div className="topbarContainer">
-                  <Link to="/home">
+                  <Link to="/">
                   <div className="topbarLeft">
                         <Museum className="icons"/>
                         <div className="logoName">

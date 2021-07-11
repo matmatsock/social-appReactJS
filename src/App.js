@@ -8,26 +8,29 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from "react-router-dom";
+import { useState } from "react";
 
 
 
 export default function App() {
 
+  const [currentUser, setCurrentUser] = useState(localStorage.getItem('user'))
 
   return (
     
     <Router>
       <div>
-        <Topbar />
+        <Topbar currentUser={currentUser}/>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/login">
-            <Login />
+            {currentUser ? <Redirect to="/" /> : <Login setCurrentUser={setCurrentUser} />}
           </Route>
-          <Route path="/home">
+          <Route path="/" exact>
             <Home />
           </Route>
           <Route path="/signup">

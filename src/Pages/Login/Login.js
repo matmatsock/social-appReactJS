@@ -1,48 +1,49 @@
 import React, { useState } from 'react';
 import LoginForm from './LoginForm';
 
+import axios from 'axios';
 
 
-export default function Login() {
+
+export default function Login(props) {
 
 
-      const adminUser = {
-            email: "test@test.com",
-            password: "test123"
-      }
-
-      const [user, setUser] = useState({ email: "", password: "" });
+   
+      
       const [error, setError] = useState("");
 
       const Login = details => {
             console.log(details);
 
-            if (details.email == adminUser.email && details.password == adminUser.password) {
-                  console.log("Zhakowano");
-                  setUser({
-                        email: details.email,
-                        password: details.email
-                  });
-            } else {
-                  console.log("Dane nie pasują!");
-                  setError("Dane nie pasują!");
+            const headers = {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
             }
-      }
-            
+
+            axios.post(
+                  'http://akademia108.pl/api/social-app/user/login',
+                  JSON.stringify(details),
+                  { 'headers': headers })
+                  .then((req) => {
+                        
+                        if(req.data.error) {
+                              console.log('błąd');
+                        } else {
+                              localStorage.setItem('user', JSON.stringify(req.data) )     
+                              props.setCurrentUser(req.data);
+                        }
+                        
+                       
+                  }).catch((error) => {
+                        console.error(error);
+                  })
+      };
 
 
-Logout = () => {
-setUser({ email:"", email: ""});
- }
-      
-  return (
+
+return (
       <div>
-              {(user.email !="") ? (
-                  <div className="welcome">
-                        <h2>Czołem, <span>{user.email}</span></h2>
-                        <button onClick={Logout}>Nie-nie, ja spadam</button>
-                  </div> ) : ( <LoginForm Login={Login} error={error} /> 
-                  )}
+            <LoginForm Login={Login} error={error} />
       </div>
-  );
+);
 }

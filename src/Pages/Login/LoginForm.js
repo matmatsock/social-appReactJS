@@ -4,7 +4,7 @@ import { Museum } from "@material-ui/icons";
 
 
 export default function LoginForm({ Login, error }) {
-      const [details,setDetails] = useState({ email:"", password:""});
+      const [details,setDetails] = useState({ username:"", password:""});
       
       const submitHandler = e => {
             e.preventDefault();
@@ -28,7 +28,7 @@ export default function LoginForm({ Login, error }) {
                                     <h2>Wbijaj</h2>
                                     {(error != "") ? ( <div className="error">{error}</div>) : ""}
                                     <div className="loginBox">
-                                          <input placeholder="Email" type="email" className="loginInput" onChange={e => setDetails({...details, email: e.target.value})} value={details.email}></input>
+                                          <input placeholder="User name" type="text" className="loginInput" onChange={e => setDetails({...details, username: e.target.value})} value={details.username}></input>
                                           <input type="text" placeholder="Password" className="loginInput" onChange={e => setDetails({...details, password: e.target.value})} value={details.password}></input>
                                           <button className="loginloginBtn" value="LOGIN">Hack in!</button>
 
