@@ -1,20 +1,28 @@
 import "./Topbar.css";
-import {AssignmentInd, Assignment, Museum} from "@material-ui/icons";
-import {Link} from "react-router-dom";
+import { AssignmentInd, Assignment, Museum } from "@material-ui/icons";
+import { Link } from "react-router-dom";
+import { Component } from "react";
 
-export default function Topbar() {
-      return (
-            <div className="topbarContainer">
-                  <Link to="/">
-                  <div className="topbarLeft">
-                        <Museum className="icons"/>
-                        <div className="logoName">
-                              atebook
+export default class Topbar extends Component {
+      render() {
+            let buttons;
+
+
+            if (this.props.user) {
+                  buttons - (
+                        <div className="topbarRight">
+
+                              <div className="logOut">
+                                    <Link to="/">
+                                          <button className="logoutBtn" onClick={() => localStorage.clear()}>Im out</button>
+                                    </Link>
+                              </div>
+
                         </div>
-                  </div>
-                  </Link>
-
-
+                  )
+            } else {
+                  buttons = (
+                        
                   <div className="topbarCenter">
                         <Link to="/login">
                         <div className="logIn">
@@ -31,6 +39,25 @@ export default function Topbar() {
                         </div>
                         </Link>
                   </div>
-            </div>
-      );
+
+
+
+                  )
+            }
+
+            return (
+                  <div className="topbarContainer">
+                        <Link to="/">
+                              <div className="topbarLeft">
+                                    <Museum className="icons" />
+                                    <div className="logoName">
+                                          atebook
+                                    </div>
+                              </div>
+                        </Link>
+                        {buttons}
+                  </div>
+            );
+
+      }
 }

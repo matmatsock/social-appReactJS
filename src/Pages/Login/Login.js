@@ -4,11 +4,18 @@ import LoginForm from './LoginForm';
 import axios from 'axios';
 
 
-
 export default function Login(props) {
 
 
-   
+      // const Logout = () => {
+      //       try{
+      //             localStorage.removeItem('data');
+      //             SetData([])
+      //       }catch(error){
+      //             console.log(error);
+      //       }
+      // }
+
       
       const [error, setError] = useState("");
 
