@@ -1,8 +1,8 @@
 import Topbar from "../../Components/Topbar/Topbar";
 import "./Signup.css";
 import {Link} from "react-router-dom";
-import useSignup from "../../useSignup";
-import validate from '../../validateInfo';
+import useSignup from "./Usesignup";
+import validate from "./Validateinfo";
 
 export default function Signup() {
       const { handleChange, handleSubmit, values, errors } = useSignup(

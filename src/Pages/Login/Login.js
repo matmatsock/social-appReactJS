@@ -7,16 +7,6 @@ import axios from 'axios';
 export default function Login(props) {
 
 
-      // const Logout = () => {
-      //       try{
-      //             localStorage.removeItem('data');
-      //             SetData([])
-      //       }catch(error){
-      //             console.log(error);
-      //       }
-      // }
-
-      
       const [error, setError] = useState("");
 
       const Login = details => {
@@ -32,15 +22,15 @@ export default function Login(props) {
                   JSON.stringify(details),
                   { 'headers': headers })
                   .then((req) => {
-                        
-                        if(req.data.error) {
+
+                        if (req.data.error) {
                               console.log('błąd');
                         } else {
-                              localStorage.setItem('user', JSON.stringify(req.data) )     
+                              localStorage.setItem('user', JSON.stringify(req.data))
                               props.setCurrentUser(req.data);
                         }
-                        
-                       
+
+
                   }).catch((error) => {
                         console.error(error);
                   })
@@ -48,9 +38,9 @@ export default function Login(props) {
 
 
 
-return (
-      <div>
-            <LoginForm Login={Login} error={error} />
-      </div>
-);
+      return (
+            <div>
+                  <LoginForm Login={Login} error={error} />
+            </div>
+      );
 }
