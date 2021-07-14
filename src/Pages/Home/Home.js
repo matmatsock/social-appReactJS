@@ -2,7 +2,7 @@ import Topbar from "../../Components/Topbar/Topbar";
 import {Link} from "react-router-dom";
 import { Component } from "react";
 import TenPosts from "../../Components/Posts/Getposts";
-import PutPost from "../../Components/Posts/Putposts";
+import PutPost from "../../Components/Posts/Putpost";
 
 
 export default class Home extends Component {

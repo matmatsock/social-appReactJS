@@ -12,7 +12,7 @@ import {
   Redirect
 } from "react-router-dom";
 import { useState } from "react";
-import TenPosts from "./Components/Getposts/Getposts";
+
 
 
 

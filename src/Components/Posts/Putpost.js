@@ -1,5 +1,5 @@
 import React from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
 export default class PutPost extends React.Component {
       state = {
@@ -16,7 +16,7 @@ export default class PutPost extends React.Component {
             const post ={
                   name: this.state.name
             }
-            axios.post(`https://akademia108.pl/api/social-app/post/add`, { user }).then(res => {
+            axios.post(`https://akademia108.pl/api/social-app/post/add`).then(res => {
                   console.log(res);
                   console.log(res.data);
             })
