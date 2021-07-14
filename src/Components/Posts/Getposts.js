@@ -16,8 +16,8 @@ export default class TenPosts extends React.Component {
       render() {
             return (
                   <ul>
-                        { this.state.postdata.map(post => <li>{post.name}</li>)}
+                        { this.state.postdata.map(post => <li key={post.id}>{post.name}</li>)}
                   </ul>
             )
-      }
+      };
 }
