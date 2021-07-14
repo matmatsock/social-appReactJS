@@ -1,5 +1,5 @@
 import Topbar from "../../Components/Topbar/Topbar";
-import "./Signup.css";
+import "./signup.css";
 import {Link} from "react-router-dom";
 import useSignup from "./Usesignup";
 import validate from "./Validateinfo";

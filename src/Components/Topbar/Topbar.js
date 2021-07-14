@@ -1,20 +1,13 @@
-import "./Topbar.css";
+import "./topbar.css";
 import { AssignmentInd, Assignment, Museum } from "@material-ui/icons";
 import { Link } from "react-router-dom";
-
-
 import axios from 'axios';
 
 export default function Topbar(props) {
 
       let buttons;
 
-
-
-
       const logOut = () => {
-            
-
 
             const headers = {
                   'Content-Type': 'application/json',
@@ -22,24 +15,19 @@ export default function Topbar(props) {
                   'Authorization': 'Bearer ' + props.currentUser.jwt_token
             }
 
-
             axios.post(
                   'http://akademia108.pl/api/social-app/user/logout',
                   JSON.stringify({}),
                   { 'headers': headers })
                   .then((req) => {
 
-                
                       props.setCurrentUser(null);
                       localStorage.setItem('user', null)
-
 
                   }).catch((error) => {
                         console.error(error);
                   })
       }
-
-
 
       if (props.currentUser) {
             buttons = (
@@ -91,6 +79,5 @@ export default function Topbar(props) {
                   {buttons}
             </div>
       );
-
 
 }
