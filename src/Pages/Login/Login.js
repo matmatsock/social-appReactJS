@@ -7,7 +7,7 @@ import axios from 'axios';
 export default function Login(props) {
 
 
-      const [error, setError] = useState("");
+      const [ error ] = useState("");
 
       const Login = details => {
             console.log(details);

@@ -26,7 +26,7 @@ export default function LoginForm({ Login, error }) {
 
                               <div className="loginRight">
                                     <h2>Wbijaj</h2>
-                                    {(error != "") ? ( <div className="error">{error}</div>) : ""}
+                                    {(error !== "") ? ( <div className="error">{error}</div>) : ""}
                                     <div className="loginBox">
                                           <input placeholder="User name" type="text" className="loginInput" onChange={e => setDetails({...details, username: e.target.value})} value={details.username}></input>
                                           <input type="text" placeholder="Password" className="loginInput" onChange={e => setDetails({...details, password: e.target.value})} value={details.password}></input>

@@ -1,4 +1,3 @@
-import Topbar from "../../Components/Topbar/Topbar";
 import "./signup.css";
 import {Link} from "react-router-dom";
 import useSignup from "./Usesignup";
@@ -18,7 +17,6 @@ export default function Signup() {
                               </label>
                               <input id="username" type="text" name="username" 
                                     className="form-input" placeholder="Tu wpisz swoje imię"
-                                     /* Tu blokuje ▼ */
                                      value={values.username}
                                      onChange={handleChange}/>
                                      {errors.username && <p>{errors.username}</p>}
