@@ -1,7 +1,7 @@
-import "./signup.css";
+import "./Signup.css";
 import {Link} from "react-router-dom";
 import useSignup from "./Usesignup";
-import validate from "./Validateinfo";
+import validate from "./ValidateInfo";
 
 export default function Signup() {
       const { handleChange, handleSubmit, values, errors } = useSignup(

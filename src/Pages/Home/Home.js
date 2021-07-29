@@ -1,21 +1,19 @@
 import { Component } from "react";
-import TenPosts from "../../Components/Posts/Getposts";
+import GetPosts from "../../Components/Posts/Getposts";
 import PutPost from "../../Components/Posts/Putpost";
 
 
-export default class Home extends Component {
-      render() {
-            <PutPost />;
-            <TenPosts />;
+export default function  Home () {
 
-     if(this.props.user){
-           return (
-                 <h2>Cześć {this.props.user.username}</h2>   
-           )
-     }
+      
 
-     return(
-           <h2>Nie rozpoznaje cię</h2>
-     )
-}
+
+      
+      return (
+            <div className="home">
+                  <h2>Lista postów</h2>
+
+                  <GetPosts />
+            </div>
+      )
 }
